@@ -6,7 +6,7 @@ from fastapi import Depends, FastAPI, File, HTTPException, Request, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, Response
 from pydantic import BaseModel, Field
-from sqlalchemy import select
+from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app import flags, sarvam
@@ -169,6 +169,27 @@ async def decide(claim_id: str, body: DecisionIn, s: AsyncSession = Depends(get_
     c.decision, c.decision_reason, c.decided_at, c.status = body.action, body.reason, now(), "decided"
     await s.commit()
     return claim_out(c)
+
+
+@app.post("/api/claims/{claim_id}/rescore")
+async def rescore(claim_id: str, s: AsyncSession = Depends(get_session)):
+    """Re-runs the rules with the current Flagsmith thresholds and rules_enabled. Status and decision are untouched."""
+    c = await _claim(s, claim_id)
+    await score_claim(s, c, flags.get_config(c.customer_id))
+    await s.commit()
+    return claim_out(c)
+
+
+@app.get("/api/stats")
+async def stats(s: AsyncSession = Depends(get_session)):
+    """Experiment readout: per question_style, claims exposed (customer opened the link) and completed (answered)."""
+    rows = await s.execute(
+        select(Claim.question_style, func.count(), func.count(Claim.answers))
+        .where(Claim.tenant_id == get_settings().tenant_id, Claim.question_style.is_not(None))
+        .group_by(Claim.question_style)
+    )
+    by_style = {style: {"exposed": exposed, "completed": completed} for style, exposed, completed in rows}
+    return {"fact_finding": {"by_question_style": by_style}}
 
 
 # ---------- customer side ----------

@@ -15,8 +15,8 @@ QUESTIONS_EN = {
     "not_delivered": "The courier shows your parcel as delivered with an OTP. Who received it, or was nobody home?",
     "return": "Sorry it didn't work out. Is the tag still on the item, and has it been worn or used?",
 }
-# Explicit speakers per language: the SDK default speaker can be invalid. Check the speaker list on the day.
-SPEAKERS = {"hi-IN": "anushka", "kn-IN": "anushka", "te-IN": "anushka", "en-IN": "anushka"}
+# Explicit speakers per language: the SDK default speaker can be invalid. Bulbul v3 speakers are multilingual.
+SPEAKERS = {"hi-IN": "priya", "kn-IN": "priya", "te-IN": "priya", "en-IN": "priya"}
 
 EXTRACT_PROMPT = """You extract facts from a customer's spoken answer about a parcel. Reply with JSON only:
 {"received_by": string|null, "nobody_home": true|false|null, "tag_on": true|false|null,
@@ -56,7 +56,8 @@ def speak(text: str, lang: str) -> bytes | None:
         return None
     try:
         r = sv.text_to_speech.convert(
-            text=text, target_language_code=lang, speaker=SPEAKERS.get(lang, "anushka"), model=get_settings().sarvam_tts_model
+            text=text, language_code=lang, speaker=SPEAKERS.get(lang, "priya"), model=get_settings().sarvam_tts_model,
+            output_audio_codec="wav",
         )
         return base64.b64decode(r.audios[0])
     except Exception as e:
@@ -89,7 +90,7 @@ def extract(transcript: str) -> dict:
         temperature=0,
         messages=[{"role": "system", "content": EXTRACT_PROMPT}, {"role": "user", "content": transcript}],
     )
-    text = r.choices[0].message.content.strip().strip("`").removeprefix("json").strip()
+    text = (r.choices[0].message.content or "").strip().strip("`").removeprefix("json").strip()
     try:
         data = json.loads(text)
     except ValueError:

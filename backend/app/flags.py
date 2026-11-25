@@ -24,10 +24,14 @@ def _fs():
         return None
     if _client is None:
         from flagsmith import Flagsmith
+        from flagsmith.analytics import EventProcessorConfig
 
-        api_url = get_settings().flagsmith_api_url
-        kwargs = {"api_url": api_url} if api_url else {}
-        _client = Flagsmith(environment_key=key, enable_analytics=True, **kwargs)
+        st = get_settings()
+        kwargs = {"api_url": st.flagsmith_api_url} if st.flagsmith_api_url else {}
+        if st.flagsmith_events_url:
+            kwargs["event_processor_config"] = EventProcessorConfig(events_api_url=st.flagsmith_events_url)
+        # enable_events is required for track_event (the experiment metric); without it the SDK raises ValueError
+        _client = Flagsmith(environment_key=key, enable_analytics=True, enable_events=True, **kwargs)
     return _client
 
 
@@ -65,7 +69,6 @@ def track(event: str, identifier: str) -> None:
     if fs is None:
         return
     try:
-        if hasattr(fs, "track_event"):
-            fs.track_event(event, identifier=identifier)
+        fs.track_event(event, identifier=identifier)
     except Exception as e:
         log.warning("flagsmith track failed: %s", e)
