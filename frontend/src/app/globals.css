@@ -7,9 +7,9 @@
 @theme inline {
     --color-background: var(--background);
     --color-foreground: var(--foreground);
-    --font-sans: var(--font-sans);
-    --font-mono: var(--font-geist-mono);
-    --font-heading: var(--font-sans);
+    --font-sans: var(--font-inter), var(--font-noto-kn), var(--font-noto-dev), var(--font-noto-te), system-ui, sans-serif;
+    --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
+    --font-heading: var(--font-inter), system-ui, sans-serif;
     --color-sidebar-ring: var(--sidebar-ring);
     --color-sidebar-border: var(--sidebar-border);
     --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -49,24 +49,24 @@
 }
 
 :root {
-    --background: oklch(1 0 0);
-    --foreground: oklch(0.145 0 0);
+    --background: #F7F7F5;
+    --foreground: #17181A;
     --card: oklch(1 0 0);
-    --card-foreground: oklch(0.145 0 0);
+    --card-foreground: #17181A;
     --popover: oklch(1 0 0);
-    --popover-foreground: oklch(0.145 0 0);
-    --primary: oklch(0.205 0 0);
-    --primary-foreground: oklch(0.985 0 0);
+    --popover-foreground: #17181A;
+    --primary: #3B4CCA;
+    --primary-foreground: #FFFFFF;
     --secondary: oklch(0.97 0 0);
     --secondary-foreground: oklch(0.205 0 0);
     --muted: oklch(0.97 0 0);
-    --muted-foreground: oklch(0.556 0 0);
+    --muted-foreground: #5F6368;
     --accent: oklch(0.97 0 0);
     --accent-foreground: oklch(0.205 0 0);
-    --destructive: oklch(0.577 0.245 27.325);
-    --border: oklch(0.922 0 0);
-    --input: oklch(0.922 0 0);
-    --ring: oklch(0.708 0 0);
+    --destructive: #C2362B;
+    --border: #EAEAE6;
+    --input: #DADAD5;
+    --ring: #3B4CCA;
     --chart-1: oklch(0.87 0 0);
     --chart-2: oklch(0.556 0 0);
     --chart-3: oklch(0.439 0 0);
@@ -81,6 +81,41 @@
     --sidebar-accent-foreground: oklch(0.205 0 0);
     --sidebar-border: oklch(0.922 0 0);
     --sidebar-ring: oklch(0.708 0 0);
+}
+
+/* ReturnRadar design tokens (from design/*.dc.html) */
+@theme {
+    --color-ink: #17181A;
+    --color-ink-2: #3A3C40;
+    --color-sub: #5F6368;
+    --color-line: #EAEAE6;
+    --color-line-soft: #F0F0EC;
+    --color-line-strong: #E3E3DF;
+    --color-canvas: #F7F7F5;
+    --color-wash: #F1F1EE;
+    --color-wash-2: #F4F4F1;
+    --color-brand: #3B4CCA;
+    --color-brand-hover: #2A389F;
+    --color-brand-soft: #EEF0FB;
+    --color-brand-line: #D6DAF5;
+    --color-high: #C2362B;
+    --color-high-soft: #FBEAE8;
+    --color-med: #8F5802;
+    --color-med-dot: #C27803;
+    --color-med-soft: #FCF3E2;
+    --color-low: #1F7A4D;
+    --color-low-soft: #E6F2EC;
+    --color-saffron: #E8A317;
+    --color-saffron-soft: #FDF3DD;
+    --color-store-line: #EFEDE6;
+    --color-store-wash: #F4F2EC;
+    --color-store-border: #DDDAD2;
+    --animate-rr-pulse: rr-pulse 1.4s ease-out infinite;
+
+    @keyframes rr-pulse {
+        0% { box-shadow: 0 0 0 0 rgba(232, 163, 23, .45); }
+        100% { box-shadow: 0 0 0 28px rgba(232, 163, 23, 0); }
+    }
 }
 
 .dark {
