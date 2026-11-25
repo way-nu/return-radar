@@ -59,4 +59,7 @@ Cluster: `backend/.env.cluster` (Flagsmith at `host.docker.internal:8100`), then
 - The cluster is a throwaway kind cluster; NudgeBee's runner can patch deployments in `return-radar` so the runbook can
   raise the memory limit.
 - If a Sarvam call fails, the question falls back to English text and the audio to "unavailable"; the form always works.
+- Local demo uses SQLite for latency; the Kubernetes deployment uses Supabase Postgres.
+- Experiment readout (voice_note vs text_form completion) comes from /api/stats; question_style assignment is done by
+  Flagsmith multivariate per customer ID. Event export to self-hosted Flagsmith is best-effort.
 - One brand, no auth. Next steps: loss reports, photo evidence, multi-brand, marketplace integrations.
