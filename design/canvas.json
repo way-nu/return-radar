@@ -1,0 +1,191 @@
+{
+  "artboards": [
+    {
+      "file": "Main.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 900,
+      "title": "1 · Claims queue",
+      "expand": "fill",
+      "is_interactive": true
+    },
+    {
+      "file": "QueueEmpty.dc.html",
+      "x": 1520,
+      "y": 0,
+      "w": 1440,
+      "h": 900,
+      "title": "1b · Queue — empty",
+      "expand": "fill"
+    },
+    {
+      "file": "QueueLoading.dc.html",
+      "x": 3040,
+      "y": 0,
+      "w": 1440,
+      "h": 900,
+      "title": "1c · Queue — loading",
+      "expand": "fill"
+    },
+    {
+      "file": "ClaimDetail.dc.html",
+      "x": 0,
+      "y": 1300,
+      "w": 1440,
+      "h": 1060,
+      "title": "2 · Claim detail (hero)",
+      "expand": "fill",
+      "is_interactive": true
+    },
+    {
+      "file": "ClaimDecided.dc.html",
+      "x": 1520,
+      "y": 1300,
+      "w": 1440,
+      "h": 1060,
+      "title": "2b · Claim — decided",
+      "expand": "fill"
+    },
+    {
+      "file": "ClaimAwaiting.dc.html",
+      "x": 3040,
+      "y": 1300,
+      "w": 1440,
+      "h": 1060,
+      "title": "2c · Claim — awaiting customer",
+      "expand": "fill"
+    },
+    {
+      "file": "ReasonRows.dc.html",
+      "x": 4560,
+      "y": 1300,
+      "w": 720,
+      "h": 420,
+      "title": "2d · Reason row styles"
+    },
+    {
+      "file": "CustomerAnswer.dc.html",
+      "x": 0,
+      "y": 2760,
+      "w": 390,
+      "h": 844,
+      "title": "3 · Answer page",
+      "is_interactive": true
+    },
+    {
+      "file": "AnswerRecording.dc.html",
+      "x": 470,
+      "y": 2760,
+      "w": 390,
+      "h": 844,
+      "title": "3b · Recording"
+    },
+    {
+      "file": "AnswerSending.dc.html",
+      "x": 940,
+      "y": 2760,
+      "w": 390,
+      "h": 844,
+      "title": "3c · Sending"
+    },
+    {
+      "file": "AnswerThanks.dc.html",
+      "x": 1410,
+      "y": 2760,
+      "w": 390,
+      "h": 844,
+      "title": "3d · Thanks"
+    },
+    {
+      "file": "AnswerForm.dc.html",
+      "x": 1880,
+      "y": 2760,
+      "w": 390,
+      "h": 844,
+      "title": "3e · Form (voice paused)"
+    },
+    {
+      "file": "AnswerMicDenied.dc.html",
+      "x": 2350,
+      "y": 2760,
+      "w": 390,
+      "h": 844,
+      "title": "3f · Mic denied"
+    },
+    {
+      "file": "DemoStore.dc.html",
+      "x": 0,
+      "y": 3984,
+      "w": 390,
+      "h": 844,
+      "title": "4 · Store — My orders",
+      "is_interactive": true
+    },
+    {
+      "file": "StoreReport.dc.html",
+      "x": 470,
+      "y": 3984,
+      "w": 390,
+      "h": 844,
+      "title": "4b · Report a problem"
+    },
+    {
+      "file": "StoreNote.dc.html",
+      "x": 940,
+      "y": 3984,
+      "w": 390,
+      "h": 844,
+      "title": "4c · Note + submit"
+    },
+    {
+      "file": "StoreSent.dc.html",
+      "x": 1410,
+      "y": 3984,
+      "w": 390,
+      "h": 844,
+      "title": "4d · Question sent"
+    }
+  ],
+  "annotations": [
+    {
+      "id": "t1",
+      "x": 0,
+      "y": -300,
+      "w": 240,
+      "maxW": 4480,
+      "text": "Console — claims queue (1440)",
+      "kind": "title1"
+    },
+    {
+      "id": "t2",
+      "x": 0,
+      "y": 1000,
+      "w": 240,
+      "maxW": 5280,
+      "text": "Console — claim detail (1440)",
+      "kind": "title1"
+    },
+    {
+      "id": "t3",
+      "x": 0,
+      "y": 2460,
+      "w": 240,
+      "maxW": 2740,
+      "text": "Customer — answer page (390)",
+      "kind": "title1"
+    },
+    {
+      "id": "t4",
+      "x": 0,
+      "y": 3684,
+      "w": 240,
+      "maxW": 1800,
+      "text": "Demo store (390)",
+      "kind": "title1"
+    }
+  ],
+  "launch": {
+    "view": "canvas"
+  }
+}

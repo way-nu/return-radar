@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ReturnRadar — Claim demo-ravi</title>
+    <script src="./_runtime/react.js"></script>
+    <script src="./_runtime/react-dom.js"></script>
+    <script src="./_runtime/support.js"></script>
+</head>
+<body>
+<x-dc>
+    <helmet>
+        <link href="https://fonts.googleapis.com" rel="preconnect">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans+Kannada:wght@400;500;600&amp;family=Noto+Sans+Devanagari:wght@400;500&amp;family=Noto+Sans+Telugu:wght@400;500&amp;display=swap"
+              rel="stylesheet">
+        <style>
+            body {
+                margin: 0;
+                background: #F7F7F5
+            }
+
+            a {
+                color: #3B4CCA
+            }
+
+            a:hover {
+                color: #2A389F
+            }
+
+            .rr-num {
+                font-variant-numeric: tabular-nums
+            }
+
+            .rr-card {
+                background: #FFFFFF;
+                border: 1px solid #EAEAE6;
+                border-radius: 12px
+            }
+
+            .rr-kv {
+                display: flex;
+                justify-content: space-between;
+                gap: 12px;
+                font-size: 14px;
+                padding: 9px 0;
+                border-top: 1px solid #F0F0EC
+            }
+
+            .rr-k {
+                color: #5F6368
+            }
+
+            .rr-v {
+                font-weight: 500;
+                text-align: right;
+                font-variant-numeric: tabular-nums
+            }
+        </style>
+    </helmet>
+    <div style="min-height: 1060px; background: #F7F7F5; display: flex; flex-wrap: wrap; font-family: Inter, 'Noto Sans Kannada', 'Noto Sans Devanagari', 'Noto Sans Telugu', system-ui, sans-serif; color: #17181A">
+
+        <aside style="flex: 1 1 232px; box-sizing: border-box; background: #FFFFFF; border-right: 1px solid #EAEAE6; padding: 24px 16px; display: flex; flex-direction: column; gap: 28px">
+            <div style="display: flex; align-items: center; gap: 10px; padding: 0 8px">
+      <span style="width: 32px; height: 32px; border-radius: 9px; background: #3B4CCA; display: flex; align-items: center; justify-content: center">
+        <svg aria-hidden="true" fill="none" height="18" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+             viewBox="0 0 24 24" width="18"><path d="M19.07 4.93A10 10 0 0 0 6.99 3.34"></path><path
+                d="M4 6h.01"></path><path d="M2.29 9.62A10 10 0 1 0 21.31 8.35"></path><path
+                d="M16.24 7.76A6 6 0 1 0 8.23 16.67"></path><path d="M12 18h.01"></path><path
+                d="M17.99 11.66A6 6 0 0 1 15.77 16.67"></path><circle cx="12" cy="12" r="2"></circle><path
+                d="m13.41 10.59 5.66-5.66"></path></svg>
+      </span>
+                <span style="font-size: 17px; font-weight: 700; letter-spacing: -0.01em">ReturnRadar</span>
+            </div>
+            <nav aria-label="Main" style="display: flex; flex-direction: column; gap: 4px; flex-grow: 1">
+                <a aria-current="page" href="Main.dc.html"
+                   style="display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 10px; background: #EEF0FB; color: #3B4CCA; font-size: 14px; font-weight: 600; text-decoration: none">
+                    <svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                         stroke-width="2" viewBox="0 0 24 24" width="18">
+                        <path d="M22 12h-6l-2 3h-4l-2-3H2"></path>
+                        <path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path>
+                    </svg>
+                    Queue
+                    <span class="rr-num"
+                          style="margin-left: auto; font-size: 12px; font-weight: 600; background: #FFFFFF; border-radius: 999px; padding: 2px 8px">14</span>
+                </a>
+            </nav>
+            <div style="display: flex; align-items: center; gap: 10px; padding: 10px; border: 1px solid #EAEAE6; border-radius: 12px">
+                <span style="width: 32px; height: 32px; border-radius: 8px; background: #FDF3DD; color: #8F5802; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center">UE</span>
+                <span style="display: flex; flex-direction: column">
+        <span style="font-size: 13px; font-weight: 600">Utsav Ethnic</span>
+        <span style="font-size: 12px; color: #5F6368">Brand workspace</span>
+      </span>
+            </div>
+        </aside>
+
+        <main style="flex: 999 1 560px; min-width: 0; box-sizing: border-box; padding: 28px 40px 40px; display: flex; flex-direction: column; gap: 24px">
+            <header style="display: flex; flex-direction: column; gap: 14px">
+                <a href="Main.dc.html"
+                   style="display: inline-flex; align-items: center; gap: 4px; font-size: 13px; font-weight: 500; text-decoration: none; align-self: flex-start">
+                    <svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                         stroke-width="2" viewBox="0 0 24 24" width="16">
+                        <path d="m15 18-6-6 6-6"></path>
+                    </svg>
+                    Claims queue
+                </a>
+                <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+                    <div style="display: flex; flex-direction: column; gap: 8px">
+                        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px">
+                            <h1 style="margin: 0; font-size: 26px; font-weight: 700; letter-spacing: -0.01em">Claim
+                                demo-ravi</h1>
+                            <span style="font-size: 12px; font-weight: 500; background: #F1F1EE; border-radius: 999px; padding: 4px 10px">Not delivered</span>
+                            <span class="rr-num"
+                                  style="display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; background: #FBEAE8; color: #C2362B; border-radius: 999px; padding: 4px 12px"><span
+                                    style="width: 7px; height: 7px; border-radius: 50%; background: #C2362B"></span>{{riskLabel}}</span>
+                        </div>
+                        <p style="margin: 0; font-size: 15px; color: #3A3C40"><span
+                                style="font-weight: 600; color: #17181A">Silk Lehenga · <span
+                                class="rr-num">₹4,999</span></span> · Ravi Kumar · filed 2 h ago</p>
+                    </div>
+                    <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 500; color: {{statusColor}}; background: #FFFFFF; border: 1px solid #EAEAE6; border-radius: 999px; padding: 6px 12px"><span
+                            style="width: 7px; height: 7px; border-radius: 50%; background: {{statusColor}}"></span>{{statusLabel}}</span>
+                </div>
+            </header>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start">
+                <div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+
+                    <section aria-labelledby="why" class="rr-card"
+                             style="padding: 20px 24px; display: flex; flex-direction: column; gap: 4px">
+                        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding-bottom: 8px">
+                            <h2 id="why" style="margin: 0; font-size: 16px; font-weight: 600">Why this is risky</h2>
+                            <span style="font-size: 13px; color: #5F6368">{{rulesMatched}}</span>
+                        </div>
+                        <sc-for as="r" hint-placeholder-count="3" list="{{reasons}}">
+                            <div style="display: flex; align-items: center; gap: 14px; padding: 12px 0; border-top: 1px solid #F0F0EC">
+                                <span class="rr-num"
+                                      style="flex: 0 0 auto; min-width: 48px; text-align: center; font-size: 14px; font-weight: 700; color: #C2362B; background: #FBEAE8; border-radius: 8px; padding: 5px 8px; box-sizing: border-box">{{r.pts}}</span>
+                                <span style="flex: 1 1 auto; font-size: 15px; line-height: 1.45">{{r.text}}</span>
+                                <code style="flex: 0 0 auto; font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 12px; color: #5F6368">{{r.rule}}</code>
+                            </div>
+                        </sc-for>
+                        <sc-if hint-placeholder-val="{{ false }}" value="{{awaiting}}">
+                            <div style="display: flex; align-items: center; gap: 14px; padding: 12px 0; border-top: 1px solid #F0F0EC">
+                                <span style="flex: 0 0 auto; min-width: 48px; text-align: center; font-size: 14px; font-weight: 700; color: #5F6368; border: 1px dashed #C9C9C4; border-radius: 8px; padding: 4px 8px; box-sizing: border-box">…</span>
+                                <span style="flex: 1 1 auto; font-size: 15px; line-height: 1.45; color: #5F6368">Customer answer not in yet. Its rules will be added when it arrives.</span>
+                            </div>
+                        </sc-if>
+                        <div class="rr-num"
+                             style="display: flex; justify-content: space-between; gap: 12px; padding-top: 12px; border-top: 1px solid #EAEAE6; font-size: 14px">
+                            <span style="color: #5F6368">{{sumLine}}</span>
+                            <span style="font-weight: 700">Score {{score}}</span>
+                        </div>
+                    </section>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px">
+
+                        <section aria-labelledby="ev-order" class="rr-card" style="padding: 18px 20px">
+                            <h3 id="ev-order"
+                                style="margin: 0 0 8px; font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 8px">
+                                <svg aria-hidden="true" fill="none" height="16" stroke="#5F6368" stroke-linecap="round"
+                                     stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16">
+                                    <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                                    <path d="M3 6h18"></path>
+                                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                                </svg>
+                                Order
+                            </h3>
+                            <div class="rr-kv"><span class="rr-k">Order</span><span class="rr-v">O-50001</span></div>
+                            <div class="rr-kv"><span class="rr-k">Ordered</span><span class="rr-v">9 Nov</span></div>
+                            <div class="rr-kv"><span class="rr-k">Payment</span><span class="rr-v">Prepaid</span></div>
+                            <div class="rr-kv"><span class="rr-k">Item</span><span
+                                    class="rr-v">Silk Lehenga · ₹4,999</span></div>
+                        </section>
+
+                        <section aria-labelledby="ev-del" class="rr-card" style="padding: 18px 20px">
+                            <h3 id="ev-del"
+                                style="margin: 0 0 8px; font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 8px">
+                                <svg aria-hidden="true" fill="none" height="16" stroke="#5F6368" stroke-linecap="round"
+                                     stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16">
+                                    <path d="m7.5 4.27 9 5.15"></path>
+                                    <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path>
+                                    <path d="m3.3 7 8.7 5 8.7-5"></path>
+                                    <path d="M12 22V12"></path>
+                                </svg>
+                                Delivery proof
+                            </h3>
+                            <div class="rr-kv"><span class="rr-k">Delivered</span><span
+                                    class="rr-v">12 Nov, 2:02 PM</span></div>
+                            <div class="rr-kv"><span class="rr-k">OTP</span><span class="rr-v"
+                                                                                  style="color: #1F7A4D; display: inline-flex; align-items: center; gap: 4px"><svg
+                                    aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24"
+                                    width="14"><path d="M20 6 9 17l-5-5"></path></svg>Verified</span></div>
+                            <div class="rr-kv"><span class="rr-k">Drop point</span><span class="rr-v"
+                                                                                         style="color: #C2362B">40 m from address</span>
+                            </div>
+                            <div aria-label="Drop point 40 metres from the delivery address"
+                                 role="img" style="margin-top: 10px; height: 64px; border-radius: 10px; background: #F4F4F1; position: relative; overflow: hidden">
+                                <span style="position: absolute; left: 30%; top: 50%; width: 12px; height: 12px; margin: -6px; border-radius: 50%; background: #3B4CCA; box-shadow: 0 0 0 6px rgba(59,76,202,.15)"></span>
+                                <span style="position: absolute; left: 30%; top: 50%; width: 40%; border-top: 2px dashed #9A9CA2"></span>
+                                <span style="position: absolute; left: 70%; top: 50%; width: 12px; height: 12px; margin: -6px; border-radius: 50%; background: #C2362B; box-shadow: 0 0 0 6px rgba(194,54,43,.15)"></span>
+                                <span style="position: absolute; left: 30%; bottom: 6px; transform: translateX(-50%); font-size: 11px; color: #3A3C40">Address</span>
+                                <span class="rr-num"
+                                      style="position: absolute; left: 50%; top: 10px; transform: translateX(-50%); font-size: 11px; font-weight: 600; color: #3A3C40">40 m</span>
+                                <span style="position: absolute; left: 70%; bottom: 6px; transform: translateX(-50%); font-size: 11px; color: #3A3C40">OTP shared</span>
+                            </div>
+                        </section>
+
+                        <section aria-labelledby="ev-cust" class="rr-card" style="padding: 18px 20px">
+                            <h3 id="ev-cust"
+                                style="margin: 0 0 8px; font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 8px">
+                                <svg aria-hidden="true" fill="none" height="16" stroke="#5F6368" stroke-linecap="round"
+                                     stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16">
+                                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                                Customer history
+                            </h3>
+                            <div class="rr-kv"><span class="rr-k">Customer</span><span class="rr-v">Ravi Kumar, Bengaluru</span>
+                            </div>
+                            <div class="rr-kv"><span class="rr-k">Orders</span><span class="rr-v">9</span></div>
+                            <div class="rr-kv"><span class="rr-k">Returns</span><span class="rr-v">7 <span
+                                    style="color: #C2362B">(78%)</span></span></div>
+                            <div class="rr-kv"><span class="rr-k">Previous claims</span><span class="rr-v">1</span>
+                            </div>
+                            <div class="rr-kv"><span class="rr-k">Linked IDs</span><span class="rr-v">1</span></div>
+                        </section>
+
+                        <section aria-labelledby="ev-ans" class="rr-card"
+                                 style="padding: 18px 20px; display: flex; flex-direction: column; gap: 10px">
+                            <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px">
+                                <h3 id="ev-ans"
+                                    style="margin: 0; font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 8px">
+                                    <svg aria-hidden="true" fill="none" height="16" stroke="#5F6368" stroke-linecap="round"
+                                         stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                                         width="16">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                    </svg>
+                                    Customer answer
+                                </h3>
+                                <span style="font-size: 12px; font-weight: 500; background: #EEF0FB; color: #3B4CCA; border-radius: 999px; padding: 3px 10px">Kannada</span>
+                            </div>
+                            <sc-if hint-placeholder-val="{{ true }}" value="{{answered}}">
+                                <div style="display: flex; flex-direction: column; gap: 10px">
+                                    <button style="display: inline-flex; align-items: center; gap: 8px; align-self: flex-start; font: inherit; font-size: 13px; font-weight: 500; color: #17181A; background: #F4F4F1; border: 0; border-radius: 999px; padding: 6px 12px 6px 6px; cursor: pointer"
+                                            type="button">
+                                        <span style="width: 24px; height: 24px; border-radius: 50%; background: #3B4CCA; display: flex; align-items: center; justify-content: center"><svg
+                                                aria-hidden="true" fill="#FFFFFF" height="11" stroke="none"
+                                                viewBox="0 0 24 24" width="11"><polygon
+                                                points="6 3 20 12 6 21 6 3"></polygon></svg></span>
+                                        Play recording
+                                    </button>
+                                    <p lang="kn"
+                                       style="margin: 0; font-family: 'Noto Sans Kannada', Inter, sans-serif; font-size: 16px; line-height: 1.6">
+                                        “ಆ ದಿನ ಮನೆಯಲ್ಲಿ ಯಾರೂ ಇರಲಿಲ್ಲ. ನನಗೆ ಪಾರ್ಸೆಲ್ ಸಿಕ್ಕಿಲ್ಲ.”</p>
+                                    <p style="margin: 0; font-size: 13px; color: #5F6368; line-height: 1.5">“Nobody was
+                                        home that day. I haven’t received the parcel.”</p>
+                                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; border-top: 1px solid #F0F0EC; padding-top: 10px; font-size: 13px">
+                                        <span style="color: #5F6368">Extracted</span>
+                                        <code style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 12px; background: #F4F4F1; border-radius: 6px; padding: 3px 8px">nobody_home
+                                            = yes</code>
+                                    </div>
+                                </div>
+                            </sc-if>
+                            <sc-if hint-placeholder-val="{{ false }}" value="{{awaiting}}">
+                                <div style="flex-grow: 1; min-height: 150px; border: 1px dashed #D6D6D1; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 16px; text-align: center">
+                                    <svg aria-hidden="true" fill="none" height="22" stroke="#5F6368" stroke-linecap="round"
+                                         stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                                         width="22">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                    <span style="font-size: 14px; font-weight: 600">Waiting for Ravi’s answer</span>
+                                    <span style="font-size: 13px; color: #5F6368; line-height: 1.45">Question sent in Kannada 2 h ago.<br>The transcript appears here when he answers.</span>
+                                </div>
+                            </sc-if>
+                        </section>
+                    </div>
+                </div>
+
+                <aside aria-label="Decision"
+                       style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+                    <sc-if hint-placeholder-val="{{ true }}" value="{{undecided}}">
+                        <section class="rr-card"
+                                 style="padding: 20px; display: flex; flex-direction: column; gap: 16px">
+                            <div style="display: flex; align-items: baseline; justify-content: space-between">
+                                <h2 style="margin: 0; font-size: 16px; font-weight: 600">Decision</h2>
+                                <span class="rr-num" style="font-size: 13px; color: #5F6368">Refund ₹4,999</span>
+                            </div>
+                            <sc-if hint-placeholder-val="{{ false }}" value="{{awaiting}}">
+                                <p style="margin: 0; font-size: 13px; line-height: 1.45; color: #5F6368; background: #F4F4F1; border-radius: 8px; padding: 10px 12px">
+                                    You can decide now, or wait for the customer’s answer.</p>
+                            </sc-if>
+                            <div aria-label="Outcome" role="group"
+                                 style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; background: #F1F1EE; border-radius: 10px; padding: 4px">
+                                <button aria-pressed="{{approvePressed}}" onClick="{{pickApprove}}" style="{{approveStyle}}"
+                                        type="button">Approve refund
+                                </button>
+                                <button aria-pressed="{{rejectPressed}}" onClick="{{pickReject}}" style="{{rejectStyle}}"
+                                        type="button">Reject
+                                </button>
+                            </div>
+                            <div style="display: flex; flex-direction: column; gap: 6px">
+                                <label for="reason" style="font-size: 13px; font-weight: 600">Reason <span
+                                        style="font-weight: 400; color: #5F6368">(required)</span></label>
+                                <textarea id="reason" onChange="{{setReason}}" placeholder="What decided it? This goes in the audit log." rows="4"
+                                          style="font: inherit; font-size: 14px; line-height: 1.45; color: #17181A; border: 1px solid #DADAD5; border-radius: 10px; padding: 10px 12px; resize: vertical"
+                                          value="{{reason}}"></textarea>
+                            </div>
+                            <button disabled="{{cantDecide}}" onClick="{{decide}}" style="{{decideStyle}}"
+                                    type="button">Decide
+                            </button>
+                            <p style="margin: 0; font-size: 12px; color: #5F6368; line-height: 1.45">The customer is
+                                told the outcome, never the score.</p>
+                        </section>
+                    </sc-if>
+                    <sc-if hint-placeholder-val="{{ false }}" value="{{decided}}">
+                        <section class="rr-card"
+                                 style="padding: 20px; display: flex; flex-direction: column; gap: 14px">
+                            <div style="display: flex; align-items: center; gap: 12px">
+              <span style="{{outcomeIconStyle}}">
+                <svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                     stroke-width="2.25" viewBox="0 0 24 24" width="18"><path
+                        d="M20 6 9 17l-5-5"></path></svg>
+              </span>
+                                <h2 style="margin: 0; font-size: 16px; font-weight: 600; line-height: 1.35">
+                                    {{outcomeTitle}}</h2>
+                            </div>
+                            <p style="margin: 0; font-size: 14px; line-height: 1.5; color: #3A3C40; border-left: 0; background: #F7F7F5; border-radius: 8px; padding: 10px 12px">
+                                {{reasonShown}}</p>
+                            <div class="rr-kv"><span class="rr-k">Refund</span><span class="rr-v">{{refundLine}}</span>
+                            </div>
+                            <div class="rr-kv"><span class="rr-k">Score at decision</span><span
+                                    class="rr-v">High · 85</span></div>
+                            <button onClick="{{undo}}" style="align-self: flex-start; font: inherit; font-size: 13px; font-weight: 600; color: #3B4CCA; background: transparent; border: 0; padding: 4px 0; cursor: pointer"
+                                    type="button">
+                                Change decision
+                            </button>
+                        </section>
+                    </sc-if>
+                    <section class="rr-card"
+                             style="padding: 16px 20px; display: flex; flex-direction: column; gap: 8px">
+                        <h2 style="margin: 0; font-size: 14px; font-weight: 600">Timeline</h2>
+                        <sc-for as="t" hint-placeholder-count="3" list="{{timeline}}">
+                            <div style="display: flex; gap: 10px; font-size: 13px; line-height: 1.4">
+                                <span class="rr-num" style="flex: 0 0 64px; color: #5F6368">{{t.time}}</span>
+                                <span>{{t.text}}</span>
+                            </div>
+                        </sc-for>
+                    </section>
+                </aside>
+            </div>
+        </main>
+    </div>
+</x-dc>
+<script data-dc-script data-props='{"view":{"editor":"enum","options":["open","decided","awaiting"],"default":"open"},"$preview":{"width":1440,"height":1060}}'
+        type="text/x-dc">
+    class Component extends DCLogic {
+      renderVals() {
+        const s = this.state || {};
+        const view = this.props.view ?? 'open';
+        const awaiting = view === 'awaiting';
+        const decided = s.decided !== undefined ? s.decided : view === 'decided';
+        const choice = s.choice !== undefined ? s.choice : (view === 'decided' ? 'reject' : null);
+        const reason = s.reason !== undefined ? s.reason : (view === 'decided' ? 'OTP-verified delivery 40 m from the address' : '');
+        const all = [
+          { pts: '+40', text: 'OTP-verified delivery at 2:02 PM, 40 m from the address', rule: 'delivery.otp_near' },
+          { pts: '+25', text: 'Returned 7 of 9 orders (78%) vs brand average 22%', rule: 'history.return_rate' },
+          { pts: '+20', text: 'Customer said ‘nobody was home’, delivery log shows OTP shared', rule: 'answer.contradicts_log' }
+        ];
+        const reasons = awaiting ? all.slice(0, 2) : all;
+        const score = awaiting ? 65 : 85;
+        const seg = (on, kind) => 'font: inherit; font-size: 14px; font-weight: 600; height: 40px; border-radius: 8px; cursor: pointer; border: 0; ' +
+          (on ? (kind === 'reject' ? 'background: #FFFFFF; color: #C2362B; box-shadow: 0 1px 2px rgba(23,24,26,.12)' : 'background: #FFFFFF; color: #1F7A4D; box-shadow: 0 1px 2px rgba(23,24,26,.12)') : 'background: transparent; color: #5F6368');
+        const can = !!choice && reason.trim().length > 0;
+        const rejected = choice === 'reject';
+        let status = awaiting ? 'Awaiting customer' : 'Answered';
+        if (decided) status = 'Decided';
+        const timeline = [
+          { time: '12 Nov', text: 'Delivered, OTP verified' },
+          { time: '1:40 PM', text: 'Claim filed: never arrived' },
+          { time: '1:41 PM', text: 'Question sent in Kannada' }
+        ];
+        if (!awaiting) timeline.push({ time: '2:05 PM', text: 'Customer answered by voice' });
+        if (decided) timeline.push({ time: '3:41 PM', text: rejected ? 'Rejected by Analyst' : 'Refund approved by Analyst' });
+        return {
+          awaiting,
+          answered: !awaiting,
+          decided,
+          undecided: !decided,
+          riskLabel: 'High · ' + score,
+          score,
+          sumLine: awaiting ? '40 + 25 = 65 so far' : '40 + 25 + 20 = 85',
+          rulesMatched: reasons.length + ' rules matched',
+          reasons,
+          statusLabel: status,
+          statusColor: decided ? '#1F7A4D' : (awaiting ? '#5F6368' : '#3B4CCA'),
+          approvePressed: choice === 'approve' ? 'true' : 'false',
+          rejectPressed: rejected ? 'true' : 'false',
+          approveStyle: seg(choice === 'approve', 'approve'),
+          rejectStyle: seg(rejected, 'reject'),
+          pickApprove: () => this.setState({ choice: 'approve' }),
+          pickReject: () => this.setState({ choice: 'reject' }),
+          reason,
+          setReason: (e) => this.setState({ reason: e.target.value }),
+          cantDecide: !can,
+          decideStyle: 'font: inherit; font-size: 15px; font-weight: 600; height: 44px; border-radius: 10px; border: 0; ' +
+            (can ? 'background: #3B4CCA; color: #FFFFFF; cursor: pointer' : 'background: #E4E6F5; color: #6B72A8; cursor: not-allowed'),
+          decide: () => { if (can) this.setState({ decided: true, choice, reason }); },
+          undo: () => this.setState({ decided: false }),
+          outcomeTitle: (rejected ? 'Rejected' : 'Refund approved') + ' by Analyst at 3:41 PM',
+          outcomeIconStyle: 'flex: 0 0 auto; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; ' +
+            (rejected ? 'background: #EEF0FB; color: #3B4CCA' : 'background: #E6F2EC; color: #1F7A4D'),
+          reasonShown: reason,
+          refundLine: rejected ? '₹4,999 not issued' : '₹4,999 issued',
+          timeline
+        };
+      }
+    }
+</script>
+</body>
+</html>

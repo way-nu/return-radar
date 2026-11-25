@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Reason row styles</title>
+    <script src="./_runtime/react.js"></script>
+    <script src="./_runtime/react-dom.js"></script>
+    <script src="./_runtime/support.js"></script>
+</head>
+<body>
+<x-dc>
+    <helmet>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+              rel="stylesheet">
+        <style>
+            body {
+                margin: 0
+            }
+        </style>
+    </helmet>
+    <div style="width: 720px; height: 420px; box-sizing: border-box; padding: 32px; background: #F7F7F5; font-family: Inter, system-ui, sans-serif; color: #17181A; display: flex; flex-direction: column; gap: 16px">
+        <div style="display: flex; flex-direction: column; gap: 4px">
+            <h1 style="margin: 0; font-size: 18px; font-weight: 600">Reason rows</h1>
+            <p style="margin: 0; font-size: 13px; color: #5F6368">Points raise or lower the score. Each row is one
+                plain-code rule.</p>
+        </div>
+        <section style="background: #FFFFFF; border: 1px solid #EAEAE6; border-radius: 12px; padding: 8px 24px">
+            <div style="display: flex; align-items: center; gap: 14px; padding: 14px 0">
+                <span style="flex: 0 0 auto; min-width: 48px; text-align: center; font-size: 14px; font-weight: 700; font-variant-numeric: tabular-nums; color: #C2362B; background: #FBEAE8; border-radius: 8px; padding: 5px 8px; box-sizing: border-box">+40</span>
+                <span style="flex: 1 1 auto; font-size: 15px">Raises risk: OTP-verified delivery at 2:02 PM, 40 m from the address</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 14px; padding: 14px 0; border-top: 1px solid #F0F0EC">
+                <span style="flex: 0 0 auto; min-width: 48px; text-align: center; font-size: 14px; font-weight: 700; font-variant-numeric: tabular-nums; color: #8F5802; background: #FCF3E2; border-radius: 8px; padding: 5px 8px; box-sizing: border-box">+10</span>
+                <span style="flex: 1 1 auto; font-size: 15px">Small raise: use amber for rules worth under 20 points</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 14px; padding: 14px 0; border-top: 1px solid #F0F0EC">
+                <span style="flex: 0 0 auto; min-width: 48px; text-align: center; font-size: 14px; font-weight: 700; font-variant-numeric: tabular-nums; color: #1F7A4D; background: #E6F2EC; border-radius: 8px; padding: 5px 8px; box-sizing: border-box">−15</span>
+                <span style="flex: 1 1 auto; font-size: 15px">Lowers risk: 14 orders, no previous claims</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 14px; padding: 14px 0; border-top: 1px solid #F0F0EC">
+                <span style="flex: 0 0 auto; min-width: 48px; text-align: center; font-size: 14px; font-weight: 700; color: #5F6368; border: 1px dashed #C9C9C4; border-radius: 8px; padding: 4px 8px; box-sizing: border-box">…</span>
+                <span style="flex: 1 1 auto; font-size: 15px; color: #5F6368">Pending: rule waits on the customer’s answer</span>
+            </div>
+        </section>
+    </div>
+</x-dc>
+<script data-dc-script data-props='{"$preview":{"width":720,"height":420}}' type="text/x-dc">
+    class Component extends DCLogic {
+      renderVals() { return {}; }
+    }
+</script>
+</body>
+</html>
