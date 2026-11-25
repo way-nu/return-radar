@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Utsav Ethnic — My orders</title>
+    <script src="./_runtime/react.js"></script>
+    <script src="./_runtime/react-dom.js"></script>
+    <script src="./_runtime/support.js"></script>
+</head>
+<body>
+<x-dc>
+    <helmet>
+        <link href="https://fonts.googleapis.com" rel="preconnect">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+              rel="stylesheet">
+        <style>
+            body {
+                margin: 0
+            }
+
+            a {
+                color: #17181A
+            }
+
+            a:hover {
+                color: #3A3C40
+            }
+
+            .ds-num {
+                font-variant-numeric: tabular-nums
+            }
+        </style>
+    </helmet>
+    <div style="width: 390px; height: 844px; overflow: hidden; position: relative; box-sizing: border-box; background: #F7F7F5; font-family: Inter, system-ui, sans-serif; color: #17181A; display: flex; flex-direction: column">
+
+        <header style="background: #FFFFFF; border-bottom: 1px solid #EFEDE6; height: 60px; flex: 0 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 16px">
+    <span style="display: flex; align-items: center; gap: 8px">
+      <span style="width: 8px; height: 8px; border-radius: 50%; background: #E8A317"></span>
+      <span style="font-size: 18px; font-weight: 700; letter-spacing: 0.01em">Utsav Ethnic</span>
+    </span>
+            <button aria-label="Bag" style="width: 44px; height: 44px; border: 0; background: transparent; display: flex; align-items: center; justify-content: center; cursor: pointer"
+                    type="button">
+                <svg aria-hidden="true" fill="none" height="22" stroke="#17181A" stroke-linecap="round" stroke-linejoin="round"
+                     stroke-width="1.75" viewBox="0 0 24 24" width="22">
+                    <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                    <path d="M3 6h18"></path>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+            </button>
+        </header>
+
+        <main style="flex: 1 1 auto; padding: 20px 16px; display: flex; flex-direction: column; gap: 16px">
+            <div style="display: flex; flex-direction: column; gap: 2px">
+                <h1 style="margin: 0; font-size: 24px; font-weight: 700">My orders</h1>
+                <span style="font-size: 14px; color: #5F6368">Ravi Kumar</span>
+            </div>
+            <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px">
+                <sc-for as="o" hint-placeholder-count="3" list="{{orders}}">
+                    <li>
+                        <button onClick="{{o.open}}" style="width: 100%; display: flex; align-items: center; gap: 14px; text-align: left; background: #FFFFFF; border: 1px solid #EFEDE6; border-radius: 14px; padding: 12px; font: inherit; color: #17181A; cursor: pointer"
+                                type="button">
+            <span style="{{o.thumbStyle}}">
+              <svg aria-hidden="true" fill="none" height="24" stroke="#17181A" stroke-linecap="round" stroke-linejoin="round"
+                   stroke-opacity="0.55" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path
+                      d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"></path></svg>
+            </span>
+                            <span style="flex: 1 1 auto; display: flex; flex-direction: column; gap: 3px">
+              <span style="font-size: 15px; font-weight: 600">{{o.name}}</span>
+              <span class="ds-num" style="font-size: 14px; color: #3A3C40">{{o.price}}</span>
+              <sc-if hint-placeholder-val="{{ false }}" value="{{o.hasStatus}}">
+                <span style="display: inline-flex; align-items: center; gap: 5px; font-size: 13px; color: #1F7A4D"><span
+                        style="width: 6px; height: 6px; border-radius: 50%; background: #1F7A4D"></span>{{o.status}}</span>
+              </sc-if>
+            </span>
+                            <svg aria-hidden="true" fill="none" height="18" stroke="#5F6368" stroke-linecap="round"
+                                 stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="18">
+                                <path d="m9 18 6-6-6-6"></path>
+                            </svg>
+                        </button>
+                    </li>
+                </sc-for>
+            </ul>
+        </main>
+
+        <sc-if hint-placeholder-val="{{ false }}" value="{{sheetOpen}}">
+            <div style="position: absolute; inset: 0; background: rgba(23,24,26,0.42); display: flex; flex-direction: column; justify-content: flex-end">
+                <section aria-label="Silk Lehenga order" aria-modal="true" role="dialog"
+                         style="background: #FFFFFF; border-radius: 22px 22px 0 0; padding: 10px 20px 28px; display: flex; flex-direction: column; gap: 18px">
+                    <span style="align-self: center; width: 40px; height: 5px; border-radius: 3px; background: #DDDAD2"></span>
+                    <div style="display: flex; align-items: center; gap: 12px">
+                        <span style="width: 48px; height: 48px; border-radius: 10px; background: #F6E7E9; flex: 0 0 auto"></span>
+                        <span style="flex: 1 1 auto; display: flex; flex-direction: column; gap: 2px">
+            <span style="font-size: 15px; font-weight: 600">Silk Lehenga · <span class="ds-num">₹4,999</span></span>
+            <span style="font-size: 13px; color: #5F6368">Delivered 12 Nov</span>
+          </span>
+                        <button aria-label="Close" onClick="{{close}}" style="width: 44px; height: 44px; border: 0; background: #F4F2EC; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer"
+                                type="button">
+                            <svg aria-hidden="true" fill="none" height="18" stroke="#17181A" stroke-linecap="round"
+                                 stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="18">
+                                <path d="M18 6 6 18"></path>
+                                <path d="m6 6 12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <sc-if hint-placeholder-val="{{ true }}" value="{{isReport}}">
+                        <div style="display: flex; flex-direction: column; gap: 12px">
+                            <h2 style="margin: 0; font-size: 20px; font-weight: 700">Report a problem</h2>
+                            <button onClick="{{pickReturn}}" style="display: flex; align-items: center; gap: 14px; min-height: 64px; padding: 0 16px; border: 1px solid #DDDAD2; border-radius: 14px; background: #FFFFFF; font: inherit; font-size: 16px; font-weight: 600; color: #17181A; text-align: left; cursor: pointer"
+                                    type="button">
+                                <span style="width: 36px; height: 36px; border-radius: 50%; background: #FDF3DD; display: flex; align-items: center; justify-content: center; flex: 0 0 auto"><svg
+                                        aria-hidden="true" fill="none" height="18" stroke="#17181A" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                                        width="18"><path
+                                        d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path
+                                        d="M3 3v5h5"></path></svg></span>
+                                I want to return it
+                            </button>
+                            <button onClick="{{pickNever}}" style="display: flex; align-items: center; gap: 14px; min-height: 64px; padding: 0 16px; border: 1px solid #DDDAD2; border-radius: 14px; background: #FFFFFF; font: inherit; font-size: 16px; font-weight: 600; color: #17181A; text-align: left; cursor: pointer"
+                                    type="button">
+                                <span style="width: 36px; height: 36px; border-radius: 50%; background: #FDF3DD; display: flex; align-items: center; justify-content: center; flex: 0 0 auto"><svg
+                                        aria-hidden="true" fill="none" height="18" stroke="#17181A" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                                        width="18"><path d="m7.5 4.27 9 5.15"></path><path
+                                        d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path><path
+                                        d="m3.3 7 8.7 5 8.7-5"></path><path d="M12 22V12"></path></svg></span>
+                                It never arrived
+                            </button>
+                        </div>
+                    </sc-if>
+
+                    <sc-if hint-placeholder-val="{{ false }}" value="{{isNote}}">
+                        <div style="display: flex; flex-direction: column; gap: 14px">
+                            <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; background: #FDF3DD; border-radius: 12px; padding: 12px 14px">
+                                <span style="font-size: 15px; font-weight: 600">{{choiceLabel}}</span>
+                                <button onClick="{{change}}" style="font: inherit; font-size: 14px; font-weight: 600; color: #17181A; text-decoration: underline; background: transparent; border: 0; min-height: 44px; cursor: pointer"
+                                        type="button">
+                                    Change
+                                </button>
+                            </div>
+                            <div style="display: flex; flex-direction: column; gap: 6px">
+                                <label for="note" style="font-size: 14px; font-weight: 600">Anything we should know?
+                                    <span style="font-weight: 400; color: #5F6368">(optional)</span></label>
+                                <textarea id="note" onChange="{{setNote}}" placeholder="Add a note" rows="3"
+                                          style="font: inherit; font-size: 15px; line-height: 1.45; color: #17181A; border: 1px solid #DDDAD2; border-radius: 12px; padding: 12px; resize: none"
+                                          value="{{note}}"></textarea>
+                            </div>
+                            <button onClick="{{submit}}" style="height: 52px; border: 0; border-radius: 14px; background: #E8A317; color: #17181A; font: inherit; font-size: 16px; font-weight: 700; cursor: pointer"
+                                    type="button">
+                                Submit
+                            </button>
+                        </div>
+                    </sc-if>
+
+                    <sc-if hint-placeholder-val="{{ false }}" value="{{isSent}}">
+                        <div style="display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; padding-top: 4px">
+            <span style="width: 56px; height: 56px; border-radius: 50%; background: #E8A317; display: flex; align-items: center; justify-content: center">
+              <svg aria-hidden="true" fill="none" height="26" stroke="#17181A" stroke-linecap="round" stroke-linejoin="round"
+                   stroke-width="2.5" viewBox="0 0 24 24" width="26"><path
+                      d="M20 6 9 17l-5-5"></path></svg>
+            </span>
+                            <h2 style="margin: 0; font-size: 20px; font-weight: 700">We’ve sent you a quick
+                                question</h2>
+                            <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #5F6368">One short question,
+                                in your language. You can answer by voice.</p>
+                            <a href="CustomerAnswer.dc.html"
+                               style="width: 100%; height: 52px; border-radius: 14px; background: #E8A317; color: #17181A; font-size: 16px; font-weight: 700; text-decoration: none; display: flex; align-items: center; justify-content: center">Answer
+                                now</a>
+                            <button onClick="{{close}}" style="min-height: 44px; border: 0; background: transparent; font: inherit; font-size: 14px; font-weight: 600; color: #5F6368; cursor: pointer"
+                                    type="button">
+                                Later
+                            </button>
+                        </div>
+                    </sc-if>
+                </section>
+            </div>
+        </sc-if>
+    </div>
+</x-dc>
+<script data-dc-script data-props='{"view":{"editor":"enum","options":["orders","report","note","sent"],"default":"orders"},"$preview":{"width":390,"height":844}}'
+        type="text/x-dc">
+    class Component extends DCLogic {
+      renderVals() {
+        const s = this.state || {};
+        const view = s.view || this.props.view || 'orders';
+        const choice = s.choice || 'never';
+        const thumb = (bg) => 'width: 64px; height: 72px; border-radius: 10px; flex: 0 0 auto; display: flex; align-items: center; justify-content: center; background: ' + bg;
+        const openSheet = () => this.setState({ view: 'report' });
+        return {
+          orders: [
+            { name: 'Silk Lehenga', price: '₹4,999', status: 'Delivered 12 Nov', hasStatus: true, thumbStyle: thumb('#F6E7E9'), open: openSheet },
+            { name: 'Cotton Kurta', price: '₹999', status: '', hasStatus: false, thumbStyle: thumb('#E8EEF6'), open: () => {} },
+            { name: 'Anarkali Kurta', price: '₹2,499', status: '', hasStatus: false, thumbStyle: thumb('#EEF3E6'), open: () => {} }
+          ],
+          sheetOpen: view !== 'orders',
+          isReport: view === 'report',
+          isNote: view === 'note',
+          isSent: view === 'sent',
+          choiceLabel: choice === 'return' ? 'I want to return it' : 'It never arrived',
+          pickReturn: () => this.setState({ view: 'note', choice: 'return' }),
+          pickNever: () => this.setState({ view: 'note', choice: 'never' }),
+          change: () => this.setState({ view: 'report' }),
+          note: s.note || '',
+          setNote: (e) => this.setState({ note: e.target.value }),
+          submit: () => this.setState({ view: 'sent' }),
+          close: () => this.setState({ view: 'orders' })
+        };
+      }
+    }
+</script>
+</body>
+</html>

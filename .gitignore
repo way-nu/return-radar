@@ -1,0 +1,9 @@
+.env
+.env.cluster
+*.db
+.venv/
+__pycache__/
+node_modules/
+.next/
+.DS_Store
+.idea/
