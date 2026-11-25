@@ -29,6 +29,7 @@ spec:
           readinessProbe:
             httpGet: { path: /api/readyz, port: 8000 }
             periodSeconds: 5
+            timeoutSeconds: 10   # readyz queries Supabase; the 1 s default never passes over the pooler
           livenessProbe:
             httpGet: { path: /api/healthz, port: 8000 }
             periodSeconds: 10
